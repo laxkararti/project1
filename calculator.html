@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calc</title>
+</head>
+<body>
+<section>
+<nav style="height: 40px; width: 300px; border:1px;">
+	<input type="text" name="display" id="dis" style="height: 40px; width: 286px;" >
+</nav>
+<article style="height: 195px; width: 300px; border: solid blue 1px; padding-top: 2px">
+<input type="button"  name="0" value="0"  style="padding-left:5px; width: 70px; height: 30px;" onclick="dis('0')" >	
+<input type="button"  name="1" value="1"  style="padding-left:5px; width: 70px; height: 30px" onclick="dis('1')">	
+<input type="button"  name="2" value="2" style="padding-left:5px; width: 70px; height: 30px" onclick="dis('2')">	
+<input type="button"  name="ac" value="AC" style="padding-left:5px; width: 70px; height: 30px" onclick="clr()&dis('0')">	
+<input type="button"  name="3" value="3"  style="padding-left:5px; width: 70px; height: 30px" onclick="dis('3')">	
+<input type="button"  name="4" value="4" style="padding-left:5px; width: 70px; height: 30px" onclick="dis('4')">	
+<input type="button"  name="5" value="5"  style="padding-left:5px; width: 70px; height: 30px" onclick="dis('5')">	
+<input type="button"  name="/" value="/" style="padding-left:5px; width: 70px; height: 30px" onclick="dis('/')">	
+<input type="button"  name="6" value="6" style="padding-left:5px; width: 70px; height: 30px" onclick="dis('6')">	
+<input type="button"  name="7" value="7" style="padding-left:5px; width: 70px; height: 30px" onclick="dis('7')">	
+<input type="button"  name="8" value="8" style="padding-left:5px; width: 70px; height: 30px" onclick="dis('8')">	
+<input type="button"  name="*" value="*" style="padding-left:5px; width: 70px; height: 30px" onclick="dis('*')">	
+<input type="button"  name="9" value="9" style="padding-left:5px; width: 70px; height: 30px" onclick="dis('9')">	
+<input type="button"  name="." value="." style="padding-left:5px; width: 70px; height: 30px" onclick="dis('.')">	
+<input type="button"  name="=" value="=" style="padding-left:5px; width: 70px; height: 30px" onclick="solve()">	
+<input type="button"  name="+" value="+" style="padding-left:5px; width: 70px; height: 30px" onclick="dis('+')">	
+<input type="button"  name="(" value="(" style="padding-left:5px; width: 70px; height: 30px" onclick="dis('(')">	
+<input type="button"  name=")" value=")" style="padding-left:5px; width: 70px; height: 30px" onclick="dis(')')">	
+<input type="button"  name="-" value="-" style="padding-left:5px; width: 70px; height: 30px" onclick="dis('-')">	
+<input type="button"  name="clear" value="clear" style="padding-left:5px; width: 70px; height: 30px" onclick="clr()">	
+</article>
+</section>
+<script type="text/javascript">
+	 exports function dis(val){
+		document.getElementById("dis").value+=val; 
+	}
+   exports	function solve(){
+	 x=document.getElementById("dis").value;
+	y=eval(x);
+    document.getElementById("dis").value=y;
+	}
+exports	function clr(){
+		document.getElementById("dis").value="";
+	}
+	
+</script>
+</body>
+</html>
